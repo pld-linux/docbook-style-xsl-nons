@@ -2,12 +2,13 @@ Summary:	DocBook XSL NONS (non-namespaced) Stylesheets
 Summary(pl.UTF-8):	Arkusze stylów XSL NONS (bez przestrzeni nazw) dla DocBooka
 Name:		docbook-style-xsl-nons
 Version:	1.79.2
-Release:	1
+Release:	2
 License:	MIT-like
 Group:		Applications/Publishing/XML
 #Source0Download: https://github.com/docbook/xslt10-stylesheets/releases
 Source0:	https://github.com/docbook/xslt10-stylesheets/releases/download/release/%{version}/docbook-xsl-nons-%{version}.tar.bz2
 # Source0-md5:	2666d1488d6ced1551d15f31d7ed8c38
+# https://anonscm.debian.org/cgit/collab-maint/docbook-xsl.git/plain/debian/patches/765567_non-recursive_string_subst.patch
 Patch0:		docbook-style-xsl-non-recursive-string-subst.patch
 URL:		https://github.com/docbook/xslt10-stylesheets
 BuildRequires:	libxml2-progs
@@ -40,6 +41,7 @@ dopasowywane po elementach bez przestrzeni nazw DocBooka.
 
 %prep
 %setup -q -n docbook-xsl-nons-%{version}
+%patch0 -p2
 
 %install
 rm -rf $RPM_BUILD_ROOT
