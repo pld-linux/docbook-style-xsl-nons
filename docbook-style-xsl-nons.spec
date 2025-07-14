@@ -41,7 +41,7 @@ dopasowywane po elementach bez przestrzeni nazw DocBooka.
 
 %prep
 %setup -q -n docbook-xsl-nons-%{version}
-%patch0 -p2
+%patch -P0 -p2
 
 %install
 rm -rf $RPM_BUILD_ROOT
