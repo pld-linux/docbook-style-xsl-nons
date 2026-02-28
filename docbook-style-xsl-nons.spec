@@ -2,7 +2,7 @@ Summary:	DocBook XSL NONS (non-namespaced) Stylesheets
 Summary(pl.UTF-8):	Arkusze stylów XSL NONS (bez przestrzeni nazw) dla DocBooka
 Name:		docbook-style-xsl-nons
 Version:	1.79.2
-Release:	2
+Release:	3
 License:	MIT-like
 Group:		Applications/Publishing/XML
 #Source0Download: https://github.com/docbook/xslt10-stylesheets/releases
